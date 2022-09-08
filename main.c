@@ -48,6 +48,7 @@ void criarRelacao(int V, Relacao *G[V][V]){
     scanf("%f",&G[l][c]->exportacao);
     printf("Ano inicio relacao = ");
     scanf("%d",&G[l][c]->anoInicio);
+    G[c][l] = G[l][c]; // cria a relação no outro sentido (aresta não dirigida)
 }
 
 void removerRelacao(int V, Relacao *G[V][V]){
